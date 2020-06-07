@@ -1,0 +1,39 @@
+.wvui-pre-lib-placeholder {
+  position: absolute;
+  border: 1px solid rgba( 0, 0, 0, .1 );
+  border-radius: 4px;
+  padding: 4px;
+  opacity: 0;
+  background:#f8f9fa;
+  box-shadow: 2px 2px 2px 0 rgba( 0, 0, 0, .1 );
+  transition:
+    all 250ms 750ms,
+    opacity 250ms ease-in,
+    transform 100ms ease-in;
+}
+
+.wvui-pre-lib-placeholder--loading {
+  opacity: 1;
+  transform: translateY(4px);
+  /* Delay four seconds then start the loading animation. The duration is three seconds which is a
+     nice speed for the size. */
+  animation: wvui-pre-lib-placeholder--loading_animation 3s 4s linear infinite;
+}
+
+@keyframes wvui-pre-lib-placeholder--loading_animation {
+  0%, 100% {
+    /* The background is part of the animation so that it's not shown until after the delay. */
+    background:
+    #f8f9fa
+     repeating-linear-gradient(
+       -45deg,
+       #f8f9fa,
+       #f8f9fa 18px,
+       #eaecf080 18px,
+       #eaecf080 32px
+     ) 0 / 200%;
+  }
+  100% {
+    background-position: 100%;
+  }
+}

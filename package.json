@@ -1,0 +1,17 @@
+{
+  "name": "wvui-pre-lib-placeholder",
+  "license": "MIT",
+  "version": "0.0.0",
+  "scripts": {
+    "start": "live-server src"
+  },
+  "peerDependencies": {
+    "vue": "^2.6.11"
+  },
+  "dependencies": {
+    "vue": "2.6.11"
+  },
+  "devDependencies": {
+    "live-server": "1.2.1"
+  }
+}
